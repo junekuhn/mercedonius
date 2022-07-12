@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 2,
-			"revision" : 2,
+			"minor" : 3,
+			"revision" : 1,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 100.0, 1153.0, 791.0 ],
+		"rect" : [ 34.0, 77.0, 1468.0, 713.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,78 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-46",
+					"linecount" : 19,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1106.0, 360.0, 150.0, 269.0 ],
+					"text" : "it doesn't synchronize as immediately as I wanted it to\n\nit does sync though\n\nthere should be a better way to immediately synchronize\n\nthe distance value works, but I'm not sure I'm affecting the right parameter\n\nmaybe it should just be a simple linear distance between tempos that has a min and max"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-24",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 647.0, 130.0, 75.0, 22.0 ],
+					"text" : "r startTempo"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-15",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 856.5, 1144.0, 92.0, 22.0 ],
+					"text" : "s syncedTempo"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "newobj",
+					"numinlets" : 6,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 945.0, 777.0, 97.0, 22.0 ],
+					"text" : "scale 0. 2. 0.3 2."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"format" : 6,
+					"id" : "obj-7",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 945.0, 714.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 945.0, 681.0, 90.0, 22.0 ],
+					"text" : "r distanceValue"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"format" : 6,
 					"id" : "obj-48",
@@ -71,7 +143,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 55.0, 457.0, 150.0, 100.0 ],
+					"patching_rect" : [ 55.0, 457.0, 152.0, 103.0 ],
 					"text" : "other ideas:\n\nSynchronizing to the nearest multiple\n\nthe drunkness increases a lot"
 				}
 
@@ -252,7 +324,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 232.391304969787598, 296.130436897277832, 150.0, 47.0 ],
+					"patching_rect" : [ 232.391304969787598, 296.130436897277832, 150.0, 48.0 ],
 					"text" : "i need to calculate the difference between this and the original message"
 				}
 
@@ -264,7 +336,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 823.0, 987.0, 150.0, 47.0 ],
+					"patching_rect" : [ 823.0, 987.0, 150.0, 48.0 ],
 					"text" : "to align, I need to calculate the new tempo independent of bangs"
 				}
 
@@ -309,7 +381,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 797.5, 915.5, 151.0, 33.0 ],
+					"patching_rect" : [ 797.5, 915.5, 151.0, 34.0 ],
 					"text" : "this is either the latency or the drunkeness"
 				}
 
@@ -484,14 +556,14 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 2,
-							"revision" : 2,
+							"minor" : 3,
+							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 59.0, 119.0, 640.0, 480.0 ],
+						"rect" : [ 59.0, 118.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -570,18 +642,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-32",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "float" ],
-					"patching_rect" : [ 1066.0, 654.0, 47.0, 22.0 ],
-					"text" : "clocker"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-31",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -599,7 +659,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 249.0, 1172.0, 150.0, 47.0 ],
+					"patching_rect" : [ 249.0, 1172.0, 150.0, 48.0 ],
 					"text" : "incrementNumSamplesWritten\n"
 				}
 
@@ -695,7 +755,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 861.0, 22.0, 150.0, 33.0 ],
+					"patching_rect" : [ 861.0, 22.0, 150.0, 34.0 ],
 					"text" : "https://www.youtube.com/watch?v=aWcIir6Fq8w"
 				}
 
@@ -767,7 +827,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 499.5, 819.0, 46.5, 33.0 ],
+					"patching_rect" : [ 499.5, 819.0, 46.5, 34.0 ],
 					"text" : "this is b!!!"
 				}
 
@@ -813,7 +873,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 313.0, 669.0, 151.0, 154.0 ],
+					"patching_rect" : [ 313.0, 669.0, 151.0, 158.0 ],
 					"text" : "simply the convert clock (since it's linear) \nm = 1001/1000 or 1000/1001\n\nb = is the difference in time (for the target clock domain) between the start times for the clocks\n\n"
 				}
 
@@ -898,7 +958,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 739.0, 420.0, 101.0, 22.0 ],
-					"text" : "250.175833"
+					"text" : "173.4259"
 				}
 
 			}
@@ -921,8 +981,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 516.25, 187.0, 29.5, 22.0 ],
-					"text" : "300"
+					"patching_rect" : [ 530.25, 198.0, 29.5, 22.0 ],
+					"text" : "200"
 				}
 
 			}
@@ -1009,7 +1069,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 313.0, 589.0, 150.0, 33.0 ],
+					"patching_rect" : [ 313.0, 589.0, 150.0, 34.0 ],
 					"text" : " timestamp pair is current count + fraction "
 				}
 
@@ -1022,7 +1082,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 566.5, 430.0, 101.0, 22.0 ],
-					"text" : "49.838625"
+					"text" : "36.0452"
 				}
 
 			}
@@ -1128,7 +1188,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 254.0, 183.0, 150.0, 100.0 ],
+					"patching_rect" : [ 254.0, 183.0, 150.0, 103.0 ],
 					"text" : "there's a linear model for converting from one clock domain to another, and updating the m and b values can be done via regression or PID\n"
 				}
 
@@ -1140,7 +1200,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 56.0, 183.0, 150.0, 87.0 ],
+					"patching_rect" : [ 56.0, 183.0, 150.0, 89.0 ],
 					"text" : "thinking about sample rates / timestamps\n\n1.  human body // lifespan\n2.  clock\n3.  solar system"
 				}
 
@@ -1152,7 +1212,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 466.0, 96.0, 150.0, 47.0 ],
+					"patching_rect" : [ 466.0, 96.0, 150.0, 48.0 ],
 					"text" : "async sample rate converter\n"
 				}
 
@@ -1164,7 +1224,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 17.0, 9.0, 398.0, 154.0 ],
+					"patching_rect" : [ 17.0, 9.0, 398.0, 158.0 ],
 					"text" : "the basic algorithm\n\n1. read samples from a buffer\n2. update NumSamples Captured (captured device domain)\n3. set playbackPositionEnd (computer clock) using convertClock function and account for latency\n4. calculate the number of samples to write = playbackPositionEnd - numSamplesCaptured\n5. exand or compress samples\n6. write the samples \n7. update NumSamplesWritten"
 				}
 
@@ -1176,7 +1236,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 681.0, 37.0, 150.0, 33.0 ],
+					"patching_rect" : [ 681.0, 37.0, 150.0, 34.0 ],
 					"text" : "clock domain // clock vs laptop // audio device"
 				}
 
@@ -1188,13 +1248,27 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 488.0, 30.0, 150.0, 47.0 ],
+					"patching_rect" : [ 488.0, 30.0, 150.0, 48.0 ],
 					"text" : "latency can never be shorter than the time sync error"
 				}
 
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-48", 0 ],
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-99", 0 ],
 					"source" : [ "obj-100", 0 ]
@@ -1277,7 +1351,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"order" : 0,
+					"source" : [ "obj-162", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-165", 1 ],
+					"order" : 1,
 					"source" : [ "obj-162", 0 ]
 				}
 
@@ -1330,6 +1413,22 @@
 				"patchline" : 				{
 					"destination" : [ "obj-143", 1 ],
 					"source" : [ "obj-21", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-72", 1 ],
+					"order" : 0,
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-72", 0 ],
+					"order" : 1,
+					"source" : [ "obj-24", 0 ]
 				}
 
 			}
@@ -1538,7 +1637,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-58", 0 ],
-					"midpoints" : [ 439.5, 411.95651388168335 ],
 					"source" : [ "obj-56", 0 ]
 				}
 
@@ -1690,6 +1788,13 @@
 					"destination" : [ "obj-66", 1 ],
 					"order" : 0,
 					"source" : [ "obj-67", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}
