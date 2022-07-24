@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 3,
-			"revision" : 1,
+			"minor" : 2,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 77.0, 1468.0, 713.0 ],
+		"rect" : [ 34.0, 100.0, 1468.0, 713.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,24 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-36",
+					"linecount" : 19,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1252.0, 70.0, 150.0, 275.0 ],
+					"text" : "new idea, using frequency instead of tempo\n\nat any moment, the listener can look in the direction of the timer to observe synchronization.  This is a pure sonification\n\nlookat bang // fade in\nlookaway bang // fade out\neuclidean distance from timer // linear difference in frequency\n\n\n\n\n\n"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-46",
 					"linecount" : 19,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1106.0, 360.0, 150.0, 269.0 ],
+					"patching_rect" : [ 209.0, 361.0, 150.0, 261.0 ],
 					"text" : "it doesn't synchronize as immediately as I wanted it to\n\nit does sync though\n\nthere should be a better way to immediately synchronize\n\nthe distance value works, but I'm not sure I'm affecting the right parameter\n\nmaybe it should just be a simple linear distance between tempos that has a min and max"
 				}
 
@@ -143,7 +155,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 55.0, 457.0, 152.0, 103.0 ],
+					"patching_rect" : [ 55.0, 457.0, 152.0, 100.0 ],
 					"text" : "other ideas:\n\nSynchronizing to the nearest multiple\n\nthe drunkness increases a lot"
 				}
 
@@ -324,7 +336,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 232.391304969787598, 296.130436897277832, 150.0, 48.0 ],
+					"patching_rect" : [ 232.391304969787598, 296.130436897277832, 150.0, 47.0 ],
 					"text" : "i need to calculate the difference between this and the original message"
 				}
 
@@ -336,7 +348,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 823.0, 987.0, 150.0, 48.0 ],
+					"patching_rect" : [ 823.0, 987.0, 150.0, 47.0 ],
 					"text" : "to align, I need to calculate the new tempo independent of bangs"
 				}
 
@@ -381,7 +393,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 797.5, 915.5, 151.0, 34.0 ],
+					"patching_rect" : [ 797.5, 915.5, 151.0, 33.0 ],
 					"text" : "this is either the latency or the drunkeness"
 				}
 
@@ -556,8 +568,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 3,
-							"revision" : 1,
+							"minor" : 2,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -659,7 +671,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 249.0, 1172.0, 150.0, 48.0 ],
+					"patching_rect" : [ 249.0, 1172.0, 150.0, 47.0 ],
 					"text" : "incrementNumSamplesWritten\n"
 				}
 
@@ -755,7 +767,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 861.0, 22.0, 150.0, 34.0 ],
+					"patching_rect" : [ 861.0, 22.0, 150.0, 33.0 ],
 					"text" : "https://www.youtube.com/watch?v=aWcIir6Fq8w"
 				}
 
@@ -827,7 +839,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 499.5, 819.0, 46.5, 34.0 ],
+					"patching_rect" : [ 499.5, 819.0, 46.5, 33.0 ],
 					"text" : "this is b!!!"
 				}
 
@@ -873,7 +885,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 313.0, 669.0, 151.0, 158.0 ],
+					"patching_rect" : [ 313.0, 669.0, 151.0, 154.0 ],
 					"text" : "simply the convert clock (since it's linear) \nm = 1001/1000 or 1000/1001\n\nb = is the difference in time (for the target clock domain) between the start times for the clocks\n\n"
 				}
 
@@ -958,7 +970,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 739.0, 420.0, 101.0, 22.0 ],
-					"text" : "173.4259"
+					"text" : "728.632041"
 				}
 
 			}
@@ -1069,7 +1081,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 313.0, 589.0, 150.0, 34.0 ],
+					"patching_rect" : [ 313.0, 589.0, 150.0, 33.0 ],
 					"text" : " timestamp pair is current count + fraction "
 				}
 
@@ -1082,7 +1094,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 566.5, 430.0, 101.0, 22.0 ],
-					"text" : "36.0452"
+					"text" : "272.390501"
 				}
 
 			}
@@ -1188,7 +1200,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 254.0, 183.0, 150.0, 103.0 ],
+					"patching_rect" : [ 254.0, 183.0, 150.0, 100.0 ],
 					"text" : "there's a linear model for converting from one clock domain to another, and updating the m and b values can be done via regression or PID\n"
 				}
 
@@ -1200,7 +1212,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 56.0, 183.0, 150.0, 89.0 ],
+					"patching_rect" : [ 56.0, 183.0, 150.0, 87.0 ],
 					"text" : "thinking about sample rates / timestamps\n\n1.  human body // lifespan\n2.  clock\n3.  solar system"
 				}
 
@@ -1212,7 +1224,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 466.0, 96.0, 150.0, 48.0 ],
+					"patching_rect" : [ 466.0, 96.0, 150.0, 47.0 ],
 					"text" : "async sample rate converter\n"
 				}
 
@@ -1224,7 +1236,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 17.0, 9.0, 398.0, 158.0 ],
+					"patching_rect" : [ 17.0, 9.0, 398.0, 154.0 ],
 					"text" : "the basic algorithm\n\n1. read samples from a buffer\n2. update NumSamples Captured (captured device domain)\n3. set playbackPositionEnd (computer clock) using convertClock function and account for latency\n4. calculate the number of samples to write = playbackPositionEnd - numSamplesCaptured\n5. exand or compress samples\n6. write the samples \n7. update NumSamplesWritten"
 				}
 
@@ -1236,7 +1248,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 681.0, 37.0, 150.0, 34.0 ],
+					"patching_rect" : [ 681.0, 37.0, 150.0, 33.0 ],
 					"text" : "clock domain // clock vs laptop // audio device"
 				}
 
@@ -1248,7 +1260,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 488.0, 30.0, 150.0, 48.0 ],
+					"patching_rect" : [ 488.0, 30.0, 150.0, 47.0 ],
 					"text" : "latency can never be shorter than the time sync error"
 				}
 
