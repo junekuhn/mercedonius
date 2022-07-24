@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 2,
-			"revision" : 2,
+			"minor" : 3,
+			"revision" : 1,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 173.0, 141.0, 1218.0, 776.0 ],
+		"rect" : [ 34.0, 77.0, 1468.0, 713.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,18 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 687.5, 333.0, 58.0, 22.0 ],
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-120",
 					"maxclass" : "message",
@@ -224,7 +236,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 987.0, 484.0, 150.0, 47.0 ],
+					"patching_rect" : [ 987.0, 484.0, 150.0, 48.0 ],
 					"text" : "ambient music has the opposite relationship, but still fades in slowly"
 				}
 
@@ -237,7 +249,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 907.5, 588.0, 50.0, 22.0 ],
-					"text" : "0.2"
+					"text" : "0.9"
 				}
 
 			}
@@ -273,7 +285,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1024.5, 588.0, 50.0, 22.0 ],
-					"text" : "0.2"
+					"text" : "0.9"
 				}
 
 			}
@@ -432,7 +444,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 514.5, 588.0, 50.0, 22.0 ],
-					"text" : "0.8"
+					"text" : "0."
 				}
 
 			}
@@ -478,7 +490,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 631.5, 588.0, 50.0, 22.0 ],
-					"text" : "0.8"
+					"text" : "0."
 				}
 
 			}
@@ -588,7 +600,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 211.0, 570.0, 151.0, 60.0 ],
+					"patching_rect" : [ 211.0, 570.0, 151.0, 62.0 ],
 					"text" : "you have to keep your head still for 2 seconds before dream music fades in"
 				}
 
@@ -628,7 +640,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 252.0, 476.0, 150.0, 60.0 ],
+					"patching_rect" : [ 252.0, 476.0, 150.0, 62.0 ],
 					"text" : "middle is when your head moves\n\nright is when you stay still"
 				}
 
@@ -711,7 +723,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 660.5, 875.5, 77.0, 33.0 ],
+					"patching_rect" : [ 660.5, 875.5, 77.0, 34.0 ],
 					"text" : "drift upward over time "
 				}
 
@@ -735,7 +747,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 967.0, 645.0, 150.0, 47.0 ],
+					"patching_rect" : [ 967.0, 645.0, 150.0, 48.0 ],
 					"text" : "new plan\n\nuse line objects"
 				}
 
@@ -746,8 +758,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 557.5, 881.0, 77.0, 22.0 ],
-					"text" : "s dreamGain"
+					"patching_rect" : [ 631.5, 1127.0, 87.0, 22.0 ],
+					"text" : "s~ dreamSong"
 				}
 
 			}
@@ -833,8 +845,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 346.0, 106.0, 56.0, 22.0 ],
-					"text" : "r velocity"
+					"patching_rect" : [ 346.0, 106.0, 91.0, 22.0 ],
+					"text" : "r dreamVelocity"
 				}
 
 			}
@@ -900,16 +912,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-35",
-					"maxclass" : "ezdac~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 610.25, 1127.0, 45.0, 45.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-23",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -939,7 +941,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 54.0, 241.0, 154.0, 301.0 ],
+					"patching_rect" : [ 54.0, 241.0, 154.0, 310.0 ],
 					"text" : "rules\n\n - there's a starting sound\n\n - if there's movement, a cooldown starts before letting the switching the sounds in\n\n- applies to both velocity and angular velocity equally\n\n- the presence of velocity will applies a force on the volume level\n\n- the force is light one way, and heavy on the other way\n\n"
 				}
 
@@ -963,6 +965,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
 					"patching_rect" : [ 681.833334445953369, 952.129870414733887, 150.0, 22.0 ]
 				}
 
@@ -984,16 +987,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-35", 1 ],
-					"order" : 0,
-					"source" : [ "obj-101", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-35", 0 ],
-					"order" : 1,
+					"destination" : [ "obj-54", 0 ],
 					"source" : [ "obj-101", 0 ]
 				}
 
@@ -1142,6 +1136,22 @@
 				"patchline" : 				{
 					"destination" : [ "obj-25", 0 ],
 					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-88", 0 ],
+					"order" : 1,
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-94", 0 ],
+					"order" : 0,
+					"source" : [ "obj-3", 0 ]
 				}
 
 			}

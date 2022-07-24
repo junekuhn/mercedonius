@@ -1,0 +1,16 @@
+todo
+
+sequencer
+- redo the sequencer without the graphics
+- add an underlying pad or reverb
+
+dreams
+
+- mostly done, just a few things to think about
+- are people going to realize the interaction?
+- binaural?
+
+synchronization
+
+- just need to tell it where the object is 
+- quaternion stuff
