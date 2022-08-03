@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 3,
-			"revision" : 1,
+			"minor" : 2,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -39,6 +39,42 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-47",
+					"maxclass" : "newobj",
+					"numinlets" : 6,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1165.0, 185.0, 90.0, 22.0 ],
+					"text" : "scale 0. 1. 0 60"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-40",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1291.0, 635.0, 32.0, 22.0 ],
+					"text" : "print"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-42",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "int", "" ],
+					"patching_rect" : [ 1165.0, 737.0, 77.0, 22.0 ],
+					"text" : "serial c 9600"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-32",
 					"maxclass" : "newobj",
@@ -141,7 +177,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 524.0, 621.5, 150.0, 34.0 ],
+					"patching_rect" : [ 524.0, 621.5, 150.0, 33.0 ],
 					"text" : "fade out linearly as distance increases"
 				}
 
@@ -259,7 +295,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 288.5, 684.0, 151.0, 172.0 ],
+					"patching_rect" : [ 288.5, 684.0, 151.0, 167.0 ],
 					"text" : "we must synchronize by setting the lookat by having someone look at the clock and hit synchronize\n\nthen, the resulting quaternion at any moment is the angular distance from the clock\n\n"
 				}
 
@@ -271,7 +307,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1070.333364248275757, 222.5, 150.0, 34.0 ],
+					"patching_rect" : [ 1070.333364248275757, 222.5, 150.0, 33.0 ],
 					"text" : "if >3 introduce more choatic effects"
 				}
 
@@ -658,7 +694,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 643.0, 58.5, 100.0, 48.0 ],
+					"patching_rect" : [ 643.0, 58.5, 100.0, 47.0 ],
 					"text" : "euclidean distance from timer"
 				}
 
@@ -696,7 +732,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 533.0, 136.5, 76.0, 34.0 ],
+					"patching_rect" : [ 533.0, 136.5, 76.0, 33.0 ],
 					"text" : "lookaway bang"
 				}
 
@@ -863,7 +899,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 37.0, 145.0, 157.0, 545.0 ],
+					"patching_rect" : [ 37.0, 145.0, 157.0, 529.0 ],
 					"text" : "new idea, using frequency instead of tempo\n\nat any moment, the listener can look in the direction of the timer to observe synchronization.  This is a pure sonification\n\nlookat bang // fade in\nlookaway bang // fade out\neuclidean distance from timer // linear difference in frequency\n\nwithin 1 m = synced\nfrom 1-3m = sonification\n>3m = little resemblence\n\n\n\n\n\n\nbase effects\n\nfiltering\nres\n\n\nchoatic effects\nnoise?\nmodulation?\nsample and hold?\n\n\ni still need to have a lookat function that uses quaternions"
 				}
 
@@ -1018,6 +1054,16 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-33", 0 ],
+					"order" : 1,
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-47", 0 ],
+					"midpoints" : [ 1174.0, 111.0, 1174.5, 189.0 ],
+					"order" : 0,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -1118,6 +1164,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-42", 0 ],
+					"source" : [ "obj-40", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-72", 0 ],
 					"source" : [ "obj-41", 2 ]
 				}
@@ -1148,6 +1201,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-58", 0 ],
 					"source" : [ "obj-46", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-42", 0 ],
+					"source" : [ "obj-47", 0 ]
 				}
 
 			}
