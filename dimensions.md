@@ -26,3 +26,22 @@
 (-2.2, -2.1, -2.2) bottom pillar
 (1.3, 0, -2.8) top space
 (1.3, -2.1, -2.8) bottom space
+
+point for top of dancefloor (40% across)
+x  0.52
+z -1.13
+point for bottom of dancefloor (40% across)
+x -1.32
+z  -3
+point that's 40% chair 60% clock
+x 0.52
+z -3.64
+
+
+z = -1.65848 + 1.0163 x
+y = -x - 3.12
+
+
+
+
+the dancefloor line is 
