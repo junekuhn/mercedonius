@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 3,
-			"revision" : 1,
+			"minor" : 2,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 41.0, 84.0, 1468.0, 713.0 ],
+		"rect" : [ 41.0, 100.0, 1468.0, 713.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -223,7 +223,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 987.0, 484.0, 150.0, 48.0 ],
+					"patching_rect" : [ 987.0, 484.0, 150.0, 47.0 ],
 					"text" : "ambient music has the opposite relationship, but still fades in slowly"
 				}
 
@@ -358,8 +358,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 982.0, 676.0, 79.0, 22.0 ],
-					"text" : "$1, 0.2 8000."
+					"patching_rect" : [ 982.0, 676.0, 72.0, 22.0 ],
+					"text" : "$1, 0.2 300."
 				}
 
 			}
@@ -395,7 +395,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 826.0, 624.0, 67.0, 22.0 ],
-					"text" : "delay 2000"
+					"text" : "delay 1000"
 				}
 
 			}
@@ -587,7 +587,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 211.0, 570.0, 151.0, 62.0 ],
+					"patching_rect" : [ 211.0, 570.0, 151.0, 60.0 ],
 					"text" : "you have to keep your head still for 2 seconds before dream music fades in"
 				}
 
@@ -627,7 +627,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 252.0, 476.0, 150.0, 62.0 ],
+					"patching_rect" : [ 252.0, 476.0, 150.0, 60.0 ],
 					"text" : "middle is when your head moves\n\nright is when you stay still"
 				}
 
@@ -652,7 +652,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 433.0, 624.0, 67.0, 22.0 ],
-					"text" : "delay 1000"
+					"text" : "delay 2000"
 				}
 
 			}
@@ -710,7 +710,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 660.5, 875.5, 77.0, 34.0 ],
+					"patching_rect" : [ 660.5, 875.5, 77.0, 33.0 ],
 					"text" : "drift upward over time "
 				}
 
@@ -734,7 +734,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 967.0, 645.0, 150.0, 48.0 ],
+					"patching_rect" : [ 967.0, 645.0, 150.0, 47.0 ],
 					"text" : "new plan\n\nuse line objects"
 				}
 
@@ -928,7 +928,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 54.0, 241.0, 154.0, 310.0 ],
+					"patching_rect" : [ 54.0, 241.0, 154.0, 301.0 ],
 					"text" : "rules\n\n - there's a starting sound\n\n - if there's movement, a cooldown starts before letting the switching the sounds in\n\n- applies to both velocity and angular velocity equally\n\n- the presence of velocity will applies a force on the volume level\n\n- the force is light one way, and heavy on the other way\n\n"
 				}
 
@@ -952,7 +952,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"parameter_enable" : 0,
 					"patching_rect" : [ 681.833334445953369, 952.129870414733887, 150.0, 22.0 ]
 				}
 
