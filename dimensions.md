@@ -37,6 +37,9 @@ point that's 40% chair 60% clock
 x 0.52
 z -3.64
 
+dancefloor dimensions
+-2.2 0.52 -2.1 0 -2.2 0
+
 
 z = -1.65848 + 1.0163 x
 y = -x - 3.12
