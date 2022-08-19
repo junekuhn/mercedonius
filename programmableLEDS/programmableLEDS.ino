@@ -25,8 +25,7 @@ CRGB leds[NUM_LEDS];
 #define BRIGHTNESS          80
 #define FRAMES_PER_SECOND  120
 
-float dancePosition = 0;
-int LEDPosition = 0;
+int dancePosition = 0;
 
 void setup() {
   delay(3000); // 3 second delay for recovery
@@ -39,7 +38,7 @@ void setup() {
   FastLED.setBrightness(BRIGHTNESS);
 
   //justin
-  //Serial.begin(9600);
+  Serial.begin(9600);
 }
 
 
@@ -53,7 +52,7 @@ uint8_t gHue = 0; // rotating "base color" used by many of the patterns
 void loop()
 {
   // Call the current pattern function once, updating the 'leds' array
-  gPatterns[gCurrentPatternNumber]();
+  lightStep();
 
   // send the 'leds' array out to the actual LED strip
   FastLED.show();  
@@ -67,15 +66,14 @@ void loop()
 
 void lightStep() {
   //read the data from max from 0 to 1
+
+  fadeToBlackBy( leds, NUM_LEDS, 20);
   if(Serial.available()) {
     dancePosition = Serial.read();
   }
-  
-  //map the incoming data to an LED along the wall
-  LEDPosition = int(map(dancePosition, 0, 1, 0, 160));
 
   //set the corresponding LED to Red
-  leds[LEDPosition];
+  leds[dancePosition] += CRGB::White;
   
 
 }
