@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 2,
-			"revision" : 2,
+			"minor" : 3,
+			"revision" : 1,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -59,16 +59,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 681.833334445953369, 963.636354446411133, 32.0, 22.0 ],
 					"text" : "start"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-9",
-					"maxclass" : "ezdac~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 296.0, 1052.0, 45.0, 45.0 ]
 				}
 
 			}
@@ -257,7 +247,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 987.0, 484.0, 150.0, 47.0 ],
+					"patching_rect" : [ 987.0, 484.0, 150.0, 48.0 ],
 					"text" : "ambient music has the opposite relationship, but still fades in slowly"
 				}
 
@@ -621,7 +611,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 211.0, 570.0, 151.0, 60.0 ],
+					"patching_rect" : [ 211.0, 570.0, 151.0, 62.0 ],
 					"text" : "you have to keep your head still for 2 seconds before dream music fades in"
 				}
 
@@ -661,7 +651,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 252.0, 476.0, 150.0, 60.0 ],
+					"patching_rect" : [ 252.0, 476.0, 150.0, 62.0 ],
 					"text" : "middle is when your head moves\n\nright is when you stay still"
 				}
 
@@ -744,7 +734,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 660.5, 875.5, 77.0, 33.0 ],
+					"patching_rect" : [ 660.5, 875.5, 77.0, 34.0 ],
 					"text" : "drift upward over time "
 				}
 
@@ -768,7 +758,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 967.0, 645.0, 150.0, 47.0 ],
+					"patching_rect" : [ 967.0, 645.0, 150.0, 48.0 ],
 					"text" : "new plan\n\nuse line objects"
 				}
 
@@ -962,7 +952,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 54.0, 241.0, 154.0, 301.0 ],
+					"patching_rect" : [ 54.0, 241.0, 154.0, 310.0 ],
 					"text" : "rules\n\n - there's a starting sound\n\n - if there's movement, a cooldown starts before letting the switching the sounds in\n\n- applies to both velocity and angular velocity equally\n\n- the presence of velocity will applies a force on the volume level\n\n- the force is light one way, and heavy on the other way\n\n"
 				}
 
@@ -986,6 +976,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
 					"patching_rect" : [ 373.5, 964.636354446411133, 150.0, 22.0 ]
 				}
 
@@ -1008,23 +999,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-54", 0 ],
-					"order" : 0,
-					"source" : [ "obj-101", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-9", 1 ],
-					"order" : 1,
-					"source" : [ "obj-101", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
-					"order" : 2,
 					"source" : [ "obj-101", 0 ]
 				}
 
