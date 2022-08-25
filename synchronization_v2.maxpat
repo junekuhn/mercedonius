@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 2,
-			"revision" : 2,
+			"minor" : 3,
+			"revision" : 1,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -39,6 +39,17 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "meter~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "float" ],
+					"patching_rect" : [ 818.0, 754.0, 80.0, 13.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-21",
 					"maxclass" : "message",
@@ -262,7 +273,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 459.0, 571.5, 150.0, 33.0 ],
+					"patching_rect" : [ 459.0, 571.5, 150.0, 34.0 ],
 					"text" : "fade out linearly as distance increases"
 				}
 
@@ -380,7 +391,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 288.5, 684.0, 151.0, 167.0 ],
+					"patching_rect" : [ 288.5, 684.0, 151.0, 172.0 ],
 					"text" : "we must synchronize by setting the lookat by having someone look at the clock and hit synchronize\n\nthen, the resulting quaternion at any moment is the angular distance from the clock\n\n"
 				}
 
@@ -392,7 +403,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1157.333364248275757, 221.0, 150.0, 33.0 ],
+					"patching_rect" : [ 1157.333364248275757, 221.0, 150.0, 34.0 ],
 					"text" : "if >3 introduce more choatic effects"
 				}
 
@@ -513,8 +524,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 854.0, 260.0, 50.0, 35.0 ],
-					"text" : "-0.98357"
+					"patching_rect" : [ 854.0, 260.0, 50.0, 36.0 ],
+					"text" : "35.26396"
 				}
 
 			}
@@ -585,7 +596,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 643.0, 58.5, 100.0, 47.0 ],
+					"patching_rect" : [ 643.0, 58.5, 100.0, 48.0 ],
 					"text" : "euclidean distance from timer"
 				}
 
@@ -697,7 +708,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 37.0, 145.0, 157.0, 529.0 ],
+					"patching_rect" : [ 37.0, 145.0, 157.0, 545.0 ],
 					"text" : "new idea, using frequency instead of tempo\n\nat any moment, the listener can look in the direction of the timer to observe synchronization.  This is a pure sonification\n\nlookat bang // fade in\nlookaway bang // fade out\neuclidean distance from timer // linear difference in frequency\n\nwithin 1 m = synced\nfrom 1-3m = sonification\n>3m = little resemblence\n\n\n\n\n\n\nbase effects\n\nfiltering\nres\n\n\nchoatic effects\nnoise?\nmodulation?\nsample and hold?\n\n\ni still need to have a lookat function that uses quaternions"
 				}
 
@@ -741,6 +752,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-32", 0 ],
+					"order" : 1,
+					"source" : [ "obj-15", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"order" : 0,
 					"source" : [ "obj-15", 0 ]
 				}
 

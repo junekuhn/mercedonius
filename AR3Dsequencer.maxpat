@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 2,
-			"revision" : 2,
+			"minor" : 3,
+			"revision" : 1,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 41.0, 100.0, 1068.0, 699.0 ],
+		"rect" : [ 41.0, 84.0, 1068.0, 699.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -47,18 +47,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 574.0, 377.0, 29.5, 22.0 ],
 					"text" : "200"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-43",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1088.0, 600.0, 73.0, 22.0 ],
-					"text" : "getcell 1 1 1"
 				}
 
 			}
@@ -106,7 +94,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1199.0, 794.0, 50.0, 22.0 ],
-					"text" : "1 1 4"
+					"text" : "1 1 1"
 				}
 
 			}
@@ -274,7 +262,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1098.5, 794.0, 50.0, 22.0 ],
-					"text" : "1 0 0"
+					"text" : "1 1 0"
 				}
 
 			}
@@ -426,7 +414,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1119.0, 739.5, 52.0, 22.0 ],
+					"patching_rect" : [ 966.5, 844.5, 52.0, 22.0 ],
 					"text" : "pack i i i"
 				}
 
@@ -439,8 +427,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 827.5, 599.5, 50.0, 35.0 ],
-					"text" : "getcell 1 1 1"
+					"patching_rect" : [ 827.5, 599.5, 50.0, 36.0 ],
+					"text" : "getcell 6 1 4"
 				}
 
 			}
@@ -570,7 +558,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1169.0, 209.0, 150.0, 60.0 ],
+					"patching_rect" : [ 1169.0, 209.0, 150.0, 62.0 ],
 					"text" : "scale from min max position to min max cell number\n"
 				}
 
@@ -690,7 +678,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 945.0, 686.5, 129.0, 22.0 ],
-					"text" : "cell 1 1 1 val 1. 0. 0. 1."
+					"text" : "cell 6 1 4 val 0. 0. 1. 1."
 				}
 
 			}
@@ -789,8 +777,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 2,
-							"revision" : 2,
+							"minor" : 3,
+							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1518,7 +1506,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 902.0, 546.5, 150.0, 87.0 ],
+					"patching_rect" : [ 902.0, 546.5, 150.0, 89.0 ],
 					"text" : "so the goal is to get different elements on the grid to light up in accordance with some jit.gen sketching\n"
 				}
 
@@ -1762,13 +1750,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-82", 1 ],
-					"source" : [ "obj-43", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-85", 0 ],
 					"source" : [ "obj-44", 0 ]
 				}
@@ -1845,7 +1826,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-84", 0 ],
+					"destination" : [ "obj-84", 1 ],
 					"order" : 0,
 					"source" : [ "obj-49", 0 ]
 				}
@@ -1877,7 +1858,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-84", 1 ],
+					"destination" : [ "obj-84", 2 ],
 					"order" : 0,
 					"source" : [ "obj-52", 0 ]
 				}
@@ -1886,15 +1867,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-59", 0 ],
-					"order" : 1,
+					"order" : 0,
 					"source" : [ "obj-53", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-84", 2 ],
-					"order" : 0,
+					"destination" : [ "obj-84", 0 ],
+					"order" : 1,
 					"source" : [ "obj-53", 0 ]
 				}
 
