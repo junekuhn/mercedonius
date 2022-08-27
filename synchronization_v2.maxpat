@@ -452,7 +452,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 760.0, 425.000009536743164, 29.5, 22.0 ],
-					"text" : "75"
+					"text" : "150"
 				}
 
 			}
@@ -519,13 +519,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-43",
-					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 854.0, 260.0, 50.0, 36.0 ],
-					"text" : "35.26396"
+					"patching_rect" : [ 854.0, 260.0, 50.0, 22.0 ],
+					"text" : "31.38"
 				}
 
 			}
