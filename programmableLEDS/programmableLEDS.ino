@@ -41,12 +41,6 @@ void setup() {
   Serial.begin(9600);
 }
 
-
-// List of patterns to cycle through.  Each is defined as a separate function below.
-typedef void (*SimplePatternList[])();
-SimplePatternList gPatterns = { rainbow, rainbowWithGlitter, confetti, sinelon, juggle, bpm };
-
-uint8_t gCurrentPatternNumber = 0; // Index number of which pattern is current
 uint8_t gHue = 0; // rotating "base color" used by many of the patterns
   
 void loop()
@@ -61,7 +55,6 @@ void loop()
 
   // do some periodic updates
   EVERY_N_MILLISECONDS( 20 ) { gHue++; } // slowly cycle the "base color" through the rainbow
-  EVERY_N_SECONDS( 10 ) { nextPattern(); } // change patterns periodically
 }
 
 void lightStep() {
@@ -74,17 +67,27 @@ void lightStep() {
 
   //set the corresponding LED to Red
   leds[dancePosition] += CRGB::White;
+
+  //define bpm 
+  uint8_t myBPM = 140;
+  uint8_t myBeat = beatsin8(myBPM, 64, 225);
+  CRGBPalette16 palette = PartyColors_p;
   
+    for( int i = 0; i < NUM_LEDS; i++) { //9948
+
+      //ignore the user white led
+      if(i==dancePosition) {
+        continue;
+      }
+
+    leds[i] = ColorFromPalette(palette, gHue+(i*2), myBeat-gHue+(i*10));
+  }
 
 }
 
 #define ARRAY_SIZE(A) (sizeof(A) / sizeof((A)[0]))
 
-void nextPattern()
-{
-  // add one to the current pattern number, and wrap around at the end
-  gCurrentPatternNumber = (gCurrentPatternNumber + 1) % ARRAY_SIZE( gPatterns);
-}
+
 
 void rainbow() 
 {
