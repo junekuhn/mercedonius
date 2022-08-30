@@ -22,7 +22,7 @@ CRGB leds[NUM_LEDS];
 //long ways 160 LEDS
 //the rest is 80 LEDS
 
-#define BRIGHTNESS          80
+#define BRIGHTNESS          10
 #define FRAMES_PER_SECOND  120
 
 int dancePosition = 0;
@@ -66,21 +66,28 @@ void lightStep() {
   }
 
   //set the corresponding LED to Red
-  leds[dancePosition] += CRGB::White;
+//  leds[dancePosition] += CRGB::White;
 
   //define bpm 
   uint8_t myBPM = 140;
-  uint8_t myBeat = beatsin8(myBPM, 64, 225);
-  CRGBPalette16 palette = PartyColors_p;
+  uint8_t myBeat = beatsin8(myBPM, 64, 255);
+  CRGBPalette16 palette = CRGBPalette16(
+    CRGB(140, 0, 0),
+    CRGB(0,0, 140),
+    CRGB(140, 0, 140),
+    CRGB(40, 0, 80)
+    );
   
     for( int i = 0; i < NUM_LEDS; i++) { //9948
 
-      //ignore the user white led
-      if(i==dancePosition) {
-        continue;
-      }
-
-    leds[i] = ColorFromPalette(palette, gHue+(i*2), myBeat-gHue+(i*10));
+//      //ignore the user white led
+//      if(i==dancePosition) {
+//        continue;
+//      }
+    if (myBeat<200) {
+      myBeat = 200;
+    }
+    leds[i] = ColorFromPalette(palette, -2*dancePosition+(i*2), myBeat);
   }
 
 }
