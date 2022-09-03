@@ -94,7 +94,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1165.0, 279.0, 53.0, 22.0 ],
-					"text" : "clip 1 60"
+					"text" : "clip 2 59"
 				}
 
 			}
@@ -525,7 +525,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 854.0, 260.0, 50.0, 36.0 ],
-					"text" : "32.583348"
+					"text" : "41.401759"
 				}
 
 			}

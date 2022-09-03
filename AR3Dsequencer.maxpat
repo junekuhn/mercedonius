@@ -117,7 +117,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1199.0, 794.0, 50.0, 22.0 ],
-					"text" : "2 1 4"
+					"text" : "3 2 2"
 				}
 
 			}
@@ -285,7 +285,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1098.5, 794.0, 50.0, 22.0 ],
-					"text" : "0 1 1"
+					"text" : "0 1 0"
 				}
 
 			}
@@ -451,7 +451,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 827.5, 599.5, 50.0, 36.0 ],
-					"text" : "getcell 5 0 3"
+					"text" : "getcell 6 1 5"
 				}
 
 			}
@@ -499,7 +499,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1193.25, 398.0, 94.0, 22.0 ],
-					"text" : "scale -1. 1. 0. 3."
+					"text" : "scale -1. 1. 0. 4."
 				}
 
 			}
@@ -701,7 +701,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 945.0, 686.5, 129.0, 22.0 ],
-					"text" : "cell 5 0 3 val 0. 1. 1. 1."
+					"text" : "cell 6 1 5 val 0. 1. 0. 1."
 				}
 
 			}
